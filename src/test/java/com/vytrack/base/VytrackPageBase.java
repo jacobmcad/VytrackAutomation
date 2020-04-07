@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public abstract class VytrackPageBase {
+
     public VytrackPageBase(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
