@@ -28,14 +28,20 @@ public abstract class VytrackPageBase {
     @FindBy(xpath = "(//a[@class='dropdown-toggle'])[1]")
     public WebElement accountHolderName;
 
+    @FindBy(xpath = "//*[@id=\"user-menu\"]/a")
+    public WebElement accountHolderDropdown;
+
     @FindBy(css = ".title-level-1")
     public List<WebElement> menu1Options;
 
     @FindBy (xpath = "//h1[@class='oro-subtitle']")
     public  WebElement pageName;
 
+    @FindBy(xpath = "//*[@id=\"user-menu\"]/ul/li[5]/a")
+    public WebElement logout;
 
-    public void changeMenu(String menu1, String menu2) {
+
+    public void navigateMenu(String menu1, String menu2) {
         String menu1xpath = "//span[contains(text(), '"+menu1+"')][@class='title title-level-1']";
         WebElement menu1Element = Driver.getDriver().findElement(By.xpath(menu1xpath));
 

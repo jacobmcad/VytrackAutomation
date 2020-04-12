@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 public class TestBase {
     protected WebDriver driver;
     protected WebDriverWait wait;
+
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
     protected VehiclesPage vehiclesPage;
@@ -23,6 +24,7 @@ public class TestBase {
         driver = Driver.getDriver();
         wait = new WebDriverWait(driver, 10);
         driver.get(ConfigurationReader.getProperty("url"));
+
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
         vehiclesPage = new VehiclesPage();
